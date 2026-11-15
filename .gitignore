@@ -44,3 +44,13 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Generated exports
+backend/exports/*
+!backend/exports/.gitkeep
+
+
