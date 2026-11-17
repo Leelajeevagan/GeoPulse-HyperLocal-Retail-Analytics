@@ -1,0 +1,14 @@
+node_modules
+frontend/node_modules
+__pycache__
+*.pyc
+.git
+.env
+.env.*
+dist
+frontend/dist
+geopulse.db
+backend/geopulse.db
+backend/exports/*.pdf
+backend/exports/*.csv
+
