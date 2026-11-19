@@ -104,38 +104,38 @@ export interface ExportLedgerItem {
 export interface OverviewKpisData {
   total_customer_visits: number;
   total_customer_visits_pct: number;
-  visits_sparkline: number[];
+  visits_sparkline?: number[];
   stores_monitored: number;
-  stores_monitored_status: string;
-  network_health_pct: number;
-  stores_sparkline: number[];
+  stores_monitored_status?: string;
+  network_health_pct?: number;
+  stores_sparkline?: number[];
   tracked_revenue: number;
   tracked_revenue_formatted: string;
   tracked_revenue_pct: number;
-  revenue_sparkline: number[];
+  revenue_sparkline?: number[];
   average_footfall_density: number;
   footfall_density_unit: string;
   footfall_density_pct: number;
-  density_sparkline: number[];
-  prime_hotspots: number;
+  density_sparkline?: number[];
+  prime_hotspots: number | string;
   prime_hotspots_sub: string;
   prime_hotspots_pct: number;
-  hotspots_sparkline: number[];
+  hotspots_sparkline?: number[];
 }
 
 export interface CorrelationItem {
   date: string;
-  full_date: string;
-  day: string;
+  full_date?: string;
+  day?: string;
   footfall: number;
   sales_k: number;
-  is_weekend: boolean;
-  conversion_rate: number;
+  is_weekend?: boolean;
+  conversion_rate?: number;
 }
 
 export interface SalesCorrelationData {
   correlation_coefficient: number;
-  correlation_strength: string;
+  correlation_strength?: string;
   optimal_conversion_window: string;
   weekend_surge_multiplier: string;
   series: CorrelationItem[];

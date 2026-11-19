@@ -137,7 +137,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({
 
         <KpiCard
           title="Prime Hotspots"
-          value={kpis?.prime_hotspots ? (typeof kpis.prime_hotspots === 'string' && kpis.prime_hotspots.includes(' ') ? kpis.prime_hotspots.split(' ')[0] : kpis.prime_hotspots) : '12'}
+          value={kpis?.prime_hotspots !== undefined ? String(kpis.prime_hotspots).split(' ')[0] : 12}
           unit="Identified"
           change={kpis?.prime_hotspots_pct || 25.0}
           subtext={kpis?.prime_hotspots_sub || '3 emerging micro-zones'}

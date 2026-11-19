@@ -37,6 +37,12 @@ jobs:
         run: |
           python -m app.database.seed_data
 
+      - name: Run Pytest Test Suite
+        working-directory: ./backend
+        run: |
+          pytest
+
+
   frontend-checks:
     name: Frontend Typecheck & Production Build
     runs-on: ubuntu-latest
