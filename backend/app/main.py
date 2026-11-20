@@ -2,7 +2,7 @@ import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.database.connection import engine, Base
-from app.routers import overview, location_analytics, footfall, mobility, reports, settings
+from app.routers import overview, location_analytics, footfall, mobility, reports, settings, forecast
 
 # Ensure database tables exist
 Base.metadata.create_all(bind=engine)
@@ -31,6 +31,7 @@ app.include_router(footfall.router)
 app.include_router(mobility.router)
 app.include_router(reports.router)
 app.include_router(settings.router)
+app.include_router(forecast.router)
 
 @app.get("/", tags=["Health"])
 def root():
