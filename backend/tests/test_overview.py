@@ -11,8 +11,8 @@ def test_get_live_feed(client):
     response = client.get("/api/overview/live-feed")
     assert response.status_code == 200
     data = response.json()
-    assert "total_visits" in data
-    assert "total_revenue" in data
+    assert "total_customer_visits" in data
+    assert "tracked_revenue" in data
     assert "store_updates" in data
     assert isinstance(data["store_updates"], list)
 

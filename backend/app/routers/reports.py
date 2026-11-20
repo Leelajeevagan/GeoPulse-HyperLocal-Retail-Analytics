@@ -128,7 +128,7 @@ def create_custom_report(payload: CustomReportRequest, db: Session = Depends(get
         "aggregation_period": payload.aggregation_period,
         "output_format": payload.output_format,
         "export_destination": payload.export_destination,
-        "metrics": payload.metrics,
+        "metrics": payload.metrics or payload.selected_metrics or [],
         "generated_by": "Enterprise Intelligence User"
     })
     return ledger_entry

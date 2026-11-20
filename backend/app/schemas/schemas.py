@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional, List, Union
 from datetime import datetime
 
 class StoreOut(BaseModel):
@@ -127,6 +127,7 @@ class CustomReportRequest(BaseModel):
     output_format: Optional[str] = "PDF"
     export_destination: Optional[str] = "Local Download"
     selected_metrics: Optional[List[str]] = []
+    metrics: Optional[List[str]] = []
 
 class OverviewKpis(BaseModel):
     total_customer_visits: int
@@ -140,7 +141,7 @@ class OverviewKpis(BaseModel):
     average_footfall_density: int
     footfall_density_unit: str
     footfall_density_pct: float
-    prime_hotspots: str
+    prime_hotspots: Union[int, str]
     prime_hotspots_sub: str
     prime_hotspots_pct: float
     visits_sparkline: List[int]
