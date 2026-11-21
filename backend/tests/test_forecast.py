@@ -32,3 +32,4 @@ def test_get_cannibalization_matrix(client):
     assert "total_store_pairs_analyzed" in data
     assert "overlapping_pairs" in data
     assert isinstance(data["overlapping_pairs"], list)
+

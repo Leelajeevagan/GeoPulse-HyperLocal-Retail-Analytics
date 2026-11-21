@@ -145,3 +145,4 @@ def calculate_catchment_cannibalization(db: Session) -> Dict[str, Any]:
         "catchment_radius_meters": 1200,
         "overlapping_pairs": pairs
     }
+

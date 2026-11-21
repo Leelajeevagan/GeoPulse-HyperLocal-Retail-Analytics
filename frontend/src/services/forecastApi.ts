@@ -71,3 +71,4 @@ export async function fetchCannibalizationMatrix(): Promise<CannibalizationRespo
   if (!res.ok) throw new Error('Failed to fetch cannibalization matrix');
   return res.json();
 }
+

@@ -65,3 +65,4 @@ def get_network_macro_forecast(db: Session = Depends(get_db)):
 def get_network_cannibalization(db: Session = Depends(get_db)):
     """Fetch spatial cannibalization risk matrix and overlapping catchment analysis."""
     return calculate_catchment_cannibalization(db)
+
